@@ -124,6 +124,54 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainUI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutPage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="htuHeat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="htuMelt.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MainUI.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MeltingCalc.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="WelcomePage.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutPage.resx">
+      <DependentUpon>AboutPage.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="htuHeat.resx">
+      <DependentUpon>htuHeat.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="htuMelt.resx">
+      <DependentUpon>htuMelt.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainUI.resx">
+      <DependentUpon>MainUI.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeltingCalc.resx">
+      <DependentUpon>MeltingCalc.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomePage.resx">
+      <DependentUpon>WelcomePage.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
