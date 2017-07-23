@@ -2,6 +2,8 @@
 #include "MainUI.h"
 #include "AboutPage.h"
 #include "MeltingCalc.h"
+#include "VaporHeat.h"
+#include "FuelHeat.h"
 
 namespace QCalcUI {
 
@@ -119,17 +121,17 @@ namespace QCalcUI {
 			// 
 			// vaporEnergyToolStripMenuItem
 			// 
-			this->vaporEnergyToolStripMenuItem->Enabled = false;
 			this->vaporEnergyToolStripMenuItem->Name = L"vaporEnergyToolStripMenuItem";
 			this->vaporEnergyToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->vaporEnergyToolStripMenuItem->Text = L"Vapor Energy";
+			this->vaporEnergyToolStripMenuItem->Click += gcnew System::EventHandler(this, &WelcomePage::vaporEnergyToolStripMenuItem_Click);
 			// 
 			// fuelEnergyToolStripMenuItem
 			// 
-			this->fuelEnergyToolStripMenuItem->Enabled = false;
 			this->fuelEnergyToolStripMenuItem->Name = L"fuelEnergyToolStripMenuItem";
 			this->fuelEnergyToolStripMenuItem->Size = System::Drawing::Size(154, 22);
 			this->fuelEnergyToolStripMenuItem->Text = L"Fuel Energy";
+			this->fuelEnergyToolStripMenuItem->Click += gcnew System::EventHandler(this, &WelcomePage::fuelEnergyToolStripMenuItem_Click);
 			// 
 			// exitToolStripMenuItem
 			// 
@@ -211,6 +213,14 @@ private: System::Void exitToolStripMenuItem_Click(System::Object^  sender, Syste
 private: System::Void meltingEnergyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	MeltingCalc ^ melt = gcnew MeltingCalc();
 	melt->Show();
+}
+private: System::Void vaporEnergyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	VaporHeat ^ vapor = gcnew VaporHeat();
+	vapor->Show();
+}
+private: System::Void fuelEnergyToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	FuelHeat ^ fuel = gcnew FuelHeat();
+	fuel->Show();
 }
 };
 }

@@ -307,7 +307,7 @@ namespace QCalcUI {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->helpToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(416, 24);
+			this->menuStrip1->Size = System::Drawing::Size(414, 24);
 			this->menuStrip1->TabIndex = 20;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -325,14 +325,14 @@ namespace QCalcUI {
 			// 
 			this->howToUseToolStripMenuItem->ImageAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->howToUseToolStripMenuItem->Name = L"howToUseToolStripMenuItem";
-			this->howToUseToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->howToUseToolStripMenuItem->Size = System::Drawing::Size(134, 22);
 			this->howToUseToolStripMenuItem->Text = L"How to use";
 			this->howToUseToolStripMenuItem->Click += gcnew System::EventHandler(this, &MeltingCalc::howToUseToolStripMenuItem_Click);
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this->aboutToolStripMenuItem->Name = L"aboutToolStripMenuItem";
-			this->aboutToolStripMenuItem->Size = System::Drawing::Size(152, 22);
+			this->aboutToolStripMenuItem->Size = System::Drawing::Size(134, 22);
 			this->aboutToolStripMenuItem->Text = L"About";
 			this->aboutToolStripMenuItem->Click += gcnew System::EventHandler(this, &MeltingCalc::aboutToolStripMenuItem_Click);
 			// 
@@ -363,6 +363,7 @@ namespace QCalcUI {
 			this->copyButton->TabIndex = 20;
 			this->copyButton->Text = L"Copy";
 			this->copyButton->UseVisualStyleBackColor = true;
+			this->copyButton->Click += gcnew System::EventHandler(this, &MeltingCalc::copyButton_Click);
 			// 
 			// answerBox
 			// 
@@ -460,7 +461,7 @@ namespace QCalcUI {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(416, 360);
+			this->ClientSize = System::Drawing::Size(414, 360);
 			this->Controls->Add(this->variablesBox);
 			this->Controls->Add(this->answerTemp);
 			this->Controls->Add(this->menuStrip1);
@@ -468,9 +469,9 @@ namespace QCalcUI {
 			this->Controls->Add(this->debugLabel);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(432, 399);
+			this->MaximumSize = System::Drawing::Size(430, 399);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(432, 399);
+			this->MinimumSize = System::Drawing::Size(430, 399);
 			this->Name = L"MeltingCalc";
 			this->Text = L"Q Calculator";
 			this->Load += gcnew System::EventHandler(this, &MeltingCalc::MeltingCalc_Load);
@@ -603,6 +604,9 @@ private: System::Void eraseButton_Click(System::Object^  sender, System::EventAr
 private: System::Void howToUseToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	htuMelt ^ htu = gcnew htuMelt();
 	htu->Show();
+}
+private: System::Void copyButton_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->answerBox->Copy();
 }
 };
 }

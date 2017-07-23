@@ -85,9 +85,9 @@ namespace QCalcUI {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(13, 26);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(75, 13);
+			this->label2->Size = System::Drawing::Size(63, 13);
 			this->label2->TabIndex = 1;
-			this->label2->Text = L"Version: 1.23b";
+			this->label2->Text = L"Version: 2.0";
 			// 
 			// label3
 			// 

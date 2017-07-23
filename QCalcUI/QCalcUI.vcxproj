@@ -137,6 +137,9 @@
     <ClInclude Include="AboutPage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FuelHeat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="htuHeat.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -149,6 +152,9 @@
     <ClInclude Include="MeltingCalc.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="VaporHeat.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="WelcomePage.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -156,6 +162,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutPage.resx">
       <DependentUpon>AboutPage.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelHeat.resx">
+      <DependentUpon>FuelHeat.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="htuHeat.resx">
       <DependentUpon>htuHeat.h</DependentUpon>
@@ -168,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MeltingCalc.resx">
       <DependentUpon>MeltingCalc.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VaporHeat.resx">
+      <DependentUpon>VaporHeat.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.h</DependentUpon>
